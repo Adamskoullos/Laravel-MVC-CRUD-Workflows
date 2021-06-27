@@ -11,12 +11,14 @@ class BlogPostController extends Controller
     {
         $posts = BlogPost::all();
 
-        return $posts;
+        return view('blog', [
+            'posts' => $posts,
+        ]);
     }
 
     public function create()
     {
-        //show form to create a blog post
+         //
     }
 
    
@@ -27,7 +29,11 @@ class BlogPostController extends Controller
 
     public function show(BlogPost $blogPost)
     {
-        return $blogPost;
+        
+        return view('single-post', [
+            'post' => $blogPost,
+        ]);
+        // return $blogPost;
     }
 
     

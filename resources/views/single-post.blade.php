@@ -23,6 +23,7 @@
         </style>
     </head>
     <body class="">
-        <h1>Single Blog Post Page</h1>
+        <a href="/blog/{{ $post->id }}"><h2>{{ $post->title }}</h2></a>
+        <p>{{ $post->body }}</p>
     </body>
 </html>
