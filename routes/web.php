@@ -14,22 +14,23 @@ use App\Http\Controllers\BlogPostController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', function () {return view('home');});
 
+// index is used to grab the whole collection
 Route::get('/blog', [\App\Http\Controllers\BlogPostController::class, 'index']);
 
+// show is used to grab individual items
 Route::get('/blog/{blogPost}', [\App\Http\Controllers\BlogPostController::class, 'show']);
 
-
-
+//
 Route::get('/blog/{blogPost}/edit', [\App\Http\Controllers\BlogPostController::class, 'edit']); 
 
+//
 Route::put('/blog/{blogPost}/edit', [\App\Http\Controllers\BlogPostController::class, 'update']);  
 
+//
 Route::delete('/blog/{blogPost}', [\App\Http\Controllers\BlogPostController::class, 'destroy']); 
 
-// Route::get('/blog/create/post, [\App\Http\Controllers\BlogPostController::class, 'create']);
+Route::get('/create', [\App\Http\Controllers\BlogPostController::class, 'create']);
 
-// Route::post('/blog/create/post, [\App\Http\Controllers\BlogPostController::class, 'store']); 
+// Route::post('/blog/create', [\App\Http\Controllers\BlogPostController::class, 'store']); 

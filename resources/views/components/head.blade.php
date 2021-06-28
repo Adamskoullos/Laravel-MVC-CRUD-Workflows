@@ -26,9 +26,39 @@
                 background: grey;
                 margin-top: 0;
                 margin-bottom: 50px;
+                padding-right: 30px;
             }
             nav ul a{
                 margin: 30px;
+            }
+            .btn-container{
+                display: flex;
+                justify-content: center;
+            }
+            .btn-container a{
+                margin: 10px;
+            }
+            .btn-container form{
+                margin: 10px;
+            }
+            .new-post-form{
+                display: flex;
+                flex-direction: column;
+                max-width: 400px;
+                margin: 50px auto;
+            }
+            .new-post-form label{
+                text-align: left;
+                margin: 20px 0;
+            }
+            .new-post-form input, .new-post-form textarea{
+                line-height: 1.5rem;
+                background: silver;
+            }
+            .new-post-form button{
+                margin: 20px auto;
+                width: 100px;
+                line-height: 1.5rem;
             }
         </style>
     </head>

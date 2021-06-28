@@ -18,7 +18,8 @@ class BlogPostController extends Controller
 
     public function create()
     {
-         //
+        // ddd('firing'); 
+        return view('/create');
     }
 
    
@@ -29,11 +30,9 @@ class BlogPostController extends Controller
 
     public function show(BlogPost $blogPost)
     {
-        
         return view('single-post', [
             'post' => $blogPost,
         ]);
-        // return $blogPost;
     }
 
     
